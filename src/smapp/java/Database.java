@@ -15,14 +15,6 @@ public class Database {
         this.studentDatabase = new StudentDatabase();
     }
 
-    public void addStudent(Student student) {
-        studentDatabase.addStudent(student);
-    }
-
-    public Student searchStudent(String id) {
-        return studentDatabase.searchStudent(id);
-    }
-
     public void deleteStudent(String id) {
         studentDatabase.deleteStudent(id);
     }
@@ -31,7 +23,4 @@ public class Database {
         studentDatabase.printStudentReport();
     }
 
-    public Iterable<Student> getStudents() {
-        return studentDatabase.getStudents();
-    }
 }

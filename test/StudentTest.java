@@ -39,8 +39,8 @@ public class StudentTest {
      */
     @Test
     public void testGetId() {//100%
-        Student student = new Student("1", "John Doe", 20, "john@example.com", "Math");
-        assertEquals("1", student.getId());
+        Student student = new Student("00001", "John Doe", 20, "john@example.com", "Math");
+        assertEquals("00001", student.getId());
     }
 
     /**
@@ -48,7 +48,7 @@ public class StudentTest {
      */
     @Test
     public void testGetName() {//100%
-        Student student = new Student("1", "John Doe", 20, "john@example.com", "Math");
+        Student student = new Student("00001", "John Doe", 20, "john@example.com", "Math");
         assertEquals("John Doe", student.getName());
     }
 
@@ -57,7 +57,7 @@ public class StudentTest {
      */
     @Test
     public void testGetAge() {//100%
-        Student student = new Student("1", "John Doe", 20, "john@example.com", "Math");
+        Student student = new Student("00001", "John Doe", 20, "john@example.com", "Math");
         assertEquals(20, student.getAge());
     }
 
@@ -66,7 +66,7 @@ public class StudentTest {
      */
     @Test
     public void testGetEmail() {//100%
-        Student student = new Student("1", "John Doe", 20, "john@example.com", "Math");
+        Student student = new Student("00001", "John Doe", 20, "john@example.com", "Math");
         assertEquals("john@example.com", student.getEmail());
     }
 
@@ -75,7 +75,7 @@ public class StudentTest {
      */
     @Test
     public void testGetCourse() {//100%
-        Student student = new Student("1", "John Doe", 20, "john@example.com", "Math");
+        Student student = new Student("00001", "John Doe", 20, "john@example.com", "Math");
         assertEquals("Math", student.getCourse());
     }
 
@@ -87,7 +87,7 @@ public class StudentTest {
      */
     @Test
     public void testSetId() {//100%
-        Student student = new Student("1", "John Doe", 20, "john@example.com", "Math");
+        Student student = new Student("00001", "John Doe", 20, "john@example.com", "Math");
         student.setId("2");
         assertEquals("2", student.getId());
     }
@@ -97,7 +97,7 @@ public class StudentTest {
      */
     @Test
     public void testSetName() {//100%
-        Student student = new Student("1", "John Doe", 20, "john@example.com", "Math");
+        Student student = new Student("00001", "John Doe", 20, "john@example.com", "Math");
         student.setName("Jane Doe");
         assertEquals("Jane Doe", student.getName());
     }
@@ -107,7 +107,7 @@ public class StudentTest {
      */
     @Test
     public void testSetAge() {//100%
-        Student student = new Student("1", "John Doe", 20, "john@example.com", "Math");
+        Student student = new Student("00001", "John Doe", 20, "john@example.com", "Math");
         student.setAge(21);
         assertEquals(21, student.getAge());
     }
@@ -117,7 +117,7 @@ public class StudentTest {
      */
     @Test
     public void testSetEmail() {//100%
-        Student student = new Student("1", "John Doe", 20, "john@example.com", "Math");
+        Student student = new Student("00001", "John Doe", 20, "john@example.com", "Math");
         student.setEmail("jane@example.com");
         assertEquals("jane@example.com", student.getEmail());
     }
@@ -127,7 +127,7 @@ public class StudentTest {
      */
     @Test
     public void testSetCourse() {//100%
-        Student student = new Student("1", "John Doe", 20, "john@example.com", "Math");
+        Student student = new Student("00001", "John Doe", 20, "john@example.com", "Math");
         student.setCourse("Science");
         assertEquals("Science", student.getCourse());
     }
@@ -140,8 +140,8 @@ public class StudentTest {
      */
     @Test
     public void testSaveStudent() {//100%
-        Student.saveStudent("1", "John Doe", 20, "john@example.com", "Math");
-        Student student = Student.searchStudent("1");
+        Student.saveStudent("00001", "John Doe", 20, "john@example.com", "Math");
+        Student student = Student.searchStudent("00001");
         assertNotNull(student);
         assertEquals("John Doe", student.getName());
     }
@@ -151,8 +151,8 @@ public class StudentTest {
      */
     @Test
     public void testSearchStudent() {//100%
-        Student.saveStudent("1", "John Doe", 20, "john@example.com", "Math");
-        Student student = Student.searchStudent("1");
+        Student.saveStudent("00001", "John Doe", 20, "john@example.com", "Math");
+        Student student = Student.searchStudent("00001");
         assertNotNull(student);
         assertEquals("John Doe", student.getName());
     }
@@ -162,10 +162,10 @@ public class StudentTest {
      */
     @Test
     public void testDeleteStudent() {//100%
-        Student.saveStudent("1", "John Doe", 20, "john@example.com", "Math");
-        boolean result = Student.deleteStudent("1");
+        Student.saveStudent("00001", "John Doe", 20, "john@example.com", "Math");
+        boolean result = Student.deleteStudent("00001");
         assertTrue(result);
-        Student student = Student.searchStudent("1");
+        Student student = Student.searchStudent("00001");
         assertNull(student);
     }
 
@@ -175,7 +175,7 @@ public class StudentTest {
      */
     @Test
     public void testStudentReport() {//100%
-        Student.saveStudent("1", "John Doe", 20, "john@example.com", "Math");
+        Student.saveStudent("00001", "John Doe", 20, "john@example.com", "Math");
         Student.studentReport();
         // Check manually that the report contains the expected student data
     }
