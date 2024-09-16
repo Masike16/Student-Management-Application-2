@@ -96,7 +96,6 @@ public class Student {
 
     public static int getValidAge(int age1) {
         // This method is not implemented as it involves user input.
-        // You can implement it according to your requirements.
         return 0;
     }
 }
